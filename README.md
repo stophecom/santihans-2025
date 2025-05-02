@@ -1,5 +1,6 @@
-# sv
+# Company Website: Santihans GmbH 
 
+Created with svelte.
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
 ## Creating a project
