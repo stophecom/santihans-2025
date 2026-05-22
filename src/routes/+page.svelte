@@ -25,27 +25,36 @@
 
 <div class="container mx-auto px-4 py-16">
 	<main>
-		<img src="/logo.svg" alt="Logo" class="mb-12 w-44" />
+		<div class="mb-12 text-4xl font-medium">SANTiHANS</div>
 		<div class="prose">
-			<h1 class="mb-3 text-4xl font-semibold text-pretty">
-				Building a better web, where privacy and people come first.
-			</h1>
+			<h1 class="mb-3 text-4xl font-semibold text-pretty">A better web starts with privacy.</h1>
 
 			<p class="text-lg font-medium text-pretty">
-				Santihans is a digital company dedicated to building thoughtful, purpose-driven products for
-				the web. Our current focus is <a href="https://scrt.link">scrt.link</a>, a privacy-conscious
-				platform to share sensitive information in the most secure way possible. At the core of
-				everything we do is a clear set of values: putting people and privacy before profit, and
-				building tools that serve real human needs—not just business agendas.
+				Santihans is the company behind <a href="https://scrt.link">scrt.link</a> — a zero-knowledge
+				tool for sharing sensitive information. We build for real human needs, not business agendas.
 			</p>
+			<img class="w-36 rounded-full" src="/images/chris.png" alt="Christophe Schwyzer" />
+			<div>
+				Christophe Schwyzer - Founder<br />
+				Contact: <a href="https://www.linkedin.com/in/stophecom/">LinkedIn</a> |
+				<a href="https://bsky.app/profile/stophe.com">Bluesky</a> |
+				<a href="https://stophe.com">Web</a>
+			</div>
 		</div>
 	</main>
-	<footer class="mt-6 border-t py-4">
-		<p>
-			SANTiHANS GmbH<br />
-			UID: CHE-244.875.499<br />
-			CH-4056 Basel
-		</p>
-		<a href="mailto:info@santihans.com">info@santihans.com</a>
+	<footer class="prose mt-6 border-t border-gray-300 py-4">
+		SANTiHANS GmbH<br />
+		UID:
+		<a href="https://www.zefix.admin.ch/en/search/entity/list/firm/1316279">CHE-244.875.499</a><br
+		/>
+		CH-4056 Basel<br />
+
+		Email: <a href="mailto:info@santihans.com">info@santihans.com</a>
+
+		<div class="mt-5 border-t border-gray-300 py-4">
+			<small class="text-gray-700"
+				>©{new Date().getFullYear()} SANTiHANS GmbH - Made in Switzerland</small
+			>
+		</div>
 	</footer>
 </div>
