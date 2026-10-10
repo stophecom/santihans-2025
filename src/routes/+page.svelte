@@ -2,6 +2,21 @@
 	import { page } from '$app/state';
 
 	let appName = 'SANTiHANS';
+
+	const products = [
+		{
+			name: 'scrt.link',
+			url: 'https://scrt.link',
+			image: '/images/scrt-link.png',
+			tagline: 'Share sensitive information. End-to-end encrypted, one time.'
+		},
+		{
+			name: 'Ponzi Potato',
+			url: 'https://www.ponzipotato.com',
+			image: '/images/ponzi-potato.webp',
+			tagline: 'Plant one potato, build an empire. A free incremental browser game.'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -9,10 +24,9 @@
 	<meta property="og:title" content="Home - {appName}" />
 	<meta
 		name="description"
-		content="Santihans is a digital company dedicated to building thoughtful, purpose-driven products for
-				the web. "
+		content="SANTiHANS GmbH is an independent studio from Basel, Switzerland, building and running scrt.link and Ponzi Potato."
 	/>
-	<meta name="keywords" content="digital agency, scrt.link" />
+	<meta name="keywords" content="santihans, scrt.link, ponzi potato" />
 
 	<meta property="og:url" content={page.url.href} />
 	<meta property="og:type" content="website" />
@@ -20,20 +34,47 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
-	<meta property="og:image:alt" content="Santihans" />
+	<meta property="og:image:alt" content="SANTiHANS GmbH" />
 </svelte:head>
 
-<div class="container mx-auto px-4 py-16">
+<div class="container mx-auto max-w-3xl px-4 py-16">
 	<main>
 		<div class="mb-12 text-4xl font-medium">SANTiHANS</div>
-		<div class="prose">
-			<h1 class="mb-3 text-4xl font-semibold text-pretty">A better web starts with privacy.</h1>
 
-			<p class="text-lg font-medium text-pretty">
-				Santihans is the company behind <a href="https://scrt.link">scrt.link</a> — a zero-knowledge
-				tool for sharing sensitive information. We build for real human needs, not business agendas.
-			</p>
-			<img class="w-36 rounded-full" src="/images/chris.png" alt="Christophe Schwyzer" />
+		<h1 class="mb-4 text-4xl font-semibold text-pretty">Products people love to use.</h1>
+		<p class="mb-12 text-lg text-pretty text-gray-700">
+			SANTiHANS GmbH is an independent studio from Basel, Switzerland. We believe a better web
+			starts with privacy and fun.
+		</p>
+
+		<ul class="mb-16 grid gap-6 sm:grid-cols-2">
+			{#each products as product (product.url)}
+				<li>
+					<a
+						href={product.url}
+						class="group block overflow-hidden border border-gray-300 transition hover:border-gray-500"
+					>
+						<img
+							class="aspect-[1200/630] w-full object-cover"
+							src={product.image}
+							alt={product.name}
+							width="1200"
+							height="630"
+						/>
+						<div class="p-4">
+							<div class="flex items-baseline justify-between text-xl font-medium">
+								<span class="group-hover:underline">{product.name}</span>
+								<span aria-hidden="true">↗</span>
+							</div>
+							<p class="mt-1 text-gray-600">{product.tagline}</p>
+						</div>
+					</a>
+				</li>
+			{/each}
+		</ul>
+
+		<div class="prose">
+			<img class="w-24 rounded-full" src="/images/chris.png" alt="Christophe Schwyzer" />
 			<div>
 				Christophe Schwyzer - Founder<br />
 				Contact: <a href="https://www.linkedin.com/in/stophecom/">LinkedIn</a> |
